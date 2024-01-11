@@ -126,23 +126,34 @@ justify-content: center;
 
 }
 #historyDetails{
+  
+  border-radius: 5px;
   color: white;
   font-size: 20px;
   margin-top: 20px;
   border: 1px solid #ccc;
   padding: 10px;
+  padding-left: 20px;
   transition: max-height 0.5s ease-out; /* Add transition property */
   max-height: 20px; /* Initially set max-height to 0 */
   overflow: hidden;
   cursor: pointer; 
+  background-color:#282626;
+  
 }
 #historyDetails[open] {
   max-height: 200px; /* Adjust the max-height value based on your content */
 }
+
 ul,li{
   letter-spacing: 2px;
   font-style: var(--font-number);
   /* font-weight: bolder; */
   font-size: large;
   list-style: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.slider{
+  font-style: italic;
 }
