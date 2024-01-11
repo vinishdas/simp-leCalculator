@@ -6,10 +6,18 @@ function insertvalue(value) {
 function clearFully()
 {
     displayValue.value = '';
+    var historyList = document.getElementById('calculationHistory');
+    while (historyList.firstChild) {
+        historyList.removeChild(historyList.firstChild);
+    } 
 }
 function calculate(){
     try {
         var result = eval(displayValue.value);
+        var historyList = document.getElementById('calculationHistory');
+        var listItem = document.createElement('li');
+        listItem.textContent = `${document.getElementById('inputValuedisplay').value} = ${result}`;
+        historyList.appendChild(listItem);
         displayValue.value = result;
     } catch (error) {
        displayValue.value = 'Error';

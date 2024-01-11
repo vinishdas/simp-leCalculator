@@ -8,7 +8,7 @@
     <title>calculator</title>
 </head>
 <body>
-      <div class="calBox">
+    <div class="calBox">
  
         <div class="inputbox">
             
@@ -52,7 +52,12 @@
                 <button  onclick="elementremoveOne()" class="RestButton" >Delete</button>
             </div>
         </div>
-      </div>
+        
+    <details id="historyDetails">
+        <summary class="slider">History</summary>
+        <ul id="calculationHistory"></ul>
+    </details>
+    </div>
       <script src="calculator.js">
     
       </script>
