@@ -1,10 +1,14 @@
 const displayValue = document.getElementById('inputValuedisplay');
 function insertvalue(value) {
+    playButtonClick();
     displayValue.value += value;
+
 }
 
 function clearFully()
 {
+    playButtonClick();
+
     displayValue.value = '';
     var historyList = document.getElementById('calculationHistory');
     while (historyList.firstChild) {
@@ -25,4 +29,15 @@ function calculate(){
 }
 function elementremoveOne(){
     displayValue.value = displayValue.value.slice(0,-1);
+    playButtonClick();
+}
+function playButtonClick() {
+     
+    
+    var buttonClickSound = document.getElementById('buttonClickSound');
+    if (buttonClickSound) {
+        buttonClickSound.currentTime = 0;  
+        buttonClickSound.playbackRate = 2;
+        buttonClickSound.play();
+    }
 }
