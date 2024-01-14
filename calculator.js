@@ -10,10 +10,7 @@ function clearFully()
     playButtonClick();
 
     displayValue.value = '';
-    var historyList = document.getElementById('calculationHistory');
-    while (historyList.firstChild) {
-        historyList.removeChild(historyList.firstChild);
-    } 
+    
 }
 function calculate(){
     try {
